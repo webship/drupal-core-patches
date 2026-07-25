@@ -1,11 +1,11 @@
 # Usage & installation
 
-You normally do **not** require this package directly — `webship/webship-patches` requires it for you.
+You normally do **not** require this package directly — `webship/patches` requires it for you.
 
 ## Direct use
 
 ```bash
-composer require webship/drupal-core-patches:~11.3.0
+composer require webship/drupal-patches:~11.3.0
 ```
 
 Composer selects the release whose `conflict` allows your installed `drupal/core` (e.g. on core 11.3 it
@@ -13,7 +13,7 @@ selects the `11.3.x` line). Ensure patching is enabled in the root project:
 
 ```json
 {
-  "config": { "allow-plugins": { "cweagans/composer-patches": true, "webship/webship-patches": true } }
+  "config": { "allow-plugins": { "cweagans/composer-patches": true, "webship/patches": true } }
 }
 ```
 
