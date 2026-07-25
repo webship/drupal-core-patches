@@ -1,0 +1,25 @@
+diff --git a/core/modules/big_pipe/src/Render/BigPipe.php b/core/modules/big_pipe/src/Render/BigPipe.php
+index eaedcda4383..9c79263e9d1 100644
+--- a/core/modules/big_pipe/src/Render/BigPipe.php
++++ b/core/modules/big_pipe/src/Render/BigPipe.php
+@@ -542,12 +542,14 @@ protected function sendPlaceholders(array $placeholders, array $placeholder_orde
+ 
+           // Delete all messages that were generated during the rendering of
+           // this placeholder, to render them in a BigPipe-optimized way.
+-          $messages = $this->messenger->deleteAll();
+-          foreach ($messages as $type => $type_messages) {
+-            foreach ($type_messages as $message) {
+-              $ajax_response->addCommand(new MessageCommand($message, NULL, ['type' => $type], FALSE));
+-            }
+-          }
++          // @todo restore when www.drupal.org/project/drupal/issues/3456176
++          // is fixed.
++          // $messages = $this->messenger->deleteAll();
++          // foreach ($messages as $type => $type_messages) {
++          //   foreach ($type_messages as $message) {
++          //     $ajax_response->addCommand(new MessageCommand($message, NULL, ['type' => $type], FALSE));
++          //   }
++          // }
+ 
+           // Push a fake request with the asset libraries loaded so far and
+           // dispatch KernelEvents::RESPONSE event. This results in the

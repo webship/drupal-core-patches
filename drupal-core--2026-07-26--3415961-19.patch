@@ -1,0 +1,25 @@
+From b7470c05b6bc87cd51fb1187aee5d0281dc58bdb Mon Sep 17 00:00:00 2001
+From: Florent Torregrosa <florent.torregrosa@gmail.com>
+Date: Tue, 10 Jun 2025 16:33:35 +0200
+Subject: [PATCH] Issue #3415961: [drupalMedia] Using the Insert Media button
+ causes the window to scroll to the bottom of the page
+
+---
+ .../src/Plugin/views/field/MediaLibrarySelectForm.php            | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/core/modules/media_library/src/Plugin/views/field/MediaLibrarySelectForm.php b/core/modules/media_library/src/Plugin/views/field/MediaLibrarySelectForm.php
+index 2e233cab5e46..994a891af840 100644
+--- a/core/modules/media_library/src/Plugin/views/field/MediaLibrarySelectForm.php
++++ b/core/modules/media_library/src/Plugin/views/field/MediaLibrarySelectForm.php
+@@ -132,6 +132,7 @@ public function viewsForm(array &$form, FormStateInterface $form_state) {
+         'query' => $query,
+       ],
+       'callback' => [static::class, 'updateWidget'],
++      'disable-refocus' => TRUE,
+     ];
+ 
+     $form['actions']['submit']['#value'] = $this->t('Insert selected');
+-- 
+GitLab
+
