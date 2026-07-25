@@ -1,11 +1,11 @@
 {
-  "name": "vardot/drupal-core-patches",
-  "description": "Drupal core patch files used by Varbase (file store). The per-core-minor branches reference these files by raw URL.",
+  "name": "webship/drupal-core-patches",
+  "description": "Drupal core patch files used by Webship (file store). The per-core-minor branches reference these files by raw URL.",
   "keywords": [
     "composer",
     "patches",
     "composer patches",
-    "varbase",
+    "webship",
     "drupal",
     "drupal core",
     "drupal core patches"
@@ -14,8 +14,8 @@
   "type": "metapackage",
   "authors": [
     {
-      "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
+      "name": "Webship",
+      "homepage": "https://www.drupal.org/webship",
       "role": "Maintainer"
     }
   ],
