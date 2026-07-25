@@ -1,11 +1,11 @@
 {
-  "name": "vardot/drupal-core-patches",
-  "description": "Curated Drupal core patches used by Varbase, one branch per Drupal core major.minor version.",
+  "name": "webship/drupal-core-patches",
+  "description": "Curated Drupal core patches used by Webship, one branch per Drupal core major.minor version.",
   "keywords": [
     "composer",
     "patches",
     "composer patches",
-    "varbase",
+    "webship",
     "drupal",
     "drupal core",
     "drupal core patches"
@@ -14,8 +14,8 @@
   "type": "metapackage",
   "authors": [
     {
-      "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
+      "name": "Webship",
+      "homepage": "https://webship.org",
       "role": "Maintainer"
     }
   ],
