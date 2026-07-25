@@ -1,5 +1,5 @@
 {
-  "name": "webship/drupal-core-patches",
+  "name": "webship/drupal-patches",
   "description": "Drupal core patch files used by Webship (file store). The per-core-minor branches reference these files by raw URL.",
   "keywords": [
     "composer",
