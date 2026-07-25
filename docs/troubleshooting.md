@@ -5,9 +5,9 @@ Almost always caused by a **moved/force-updated tag**. Packagist treats tags as 
 moved tag and cut a new patch version (`11.3.1`) instead. Never `git tag -f` a released tag.
 
 ## Core patches are not applied
-- Ensure `webship/drupal-core-patches` is in the consuming plugin's `allowed-dependency-patches`
-  (`webship-patches` includes it by default).
-- Ensure `cweagans/composer-patches` and `webship/webship-patches` are allowed plugins in the root project.
+- Ensure `webship/drupal-patches` is in the consuming plugin's `allowed-dependency-patches`
+  (`patches` includes it by default).
+- Ensure `cweagans/composer-patches` and `webship/patches` are allowed plugins in the root project.
 
 ## Composer cannot resolve `~11.3.0`
 A stable tag must exist on the matching branch. With only a dev branch, require `11.3.x-dev` (or use
