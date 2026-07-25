@@ -1,5 +1,5 @@
 {
-  "name": "webship/drupal-core-patches",
+  "name": "webship/drupal-patches",
   "description": "Curated Drupal core patches used by Webship, one branch per Drupal core major.minor version.",
   "keywords": [
     "composer",
