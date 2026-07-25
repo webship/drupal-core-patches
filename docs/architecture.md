@@ -2,7 +2,7 @@
 
 ## Model
 
-`vardot/drupal-core-patches` is a **metapackage** (no source code, never installed to disk). Its only
+`webship/drupal-core-patches` is a **metapackage** (no source code, never installed to disk). Its only
 job is to declare Drupal core patches and bind them to a Drupal core minor.
 
 ```
@@ -24,11 +24,11 @@ compatible release.
 - **metapackage**: nothing is installed to disk, so patches must be referenced by URL. The composer.json
   lists the patch URLs; `cweagans/composer-patches` downloads and applies them.
 - **`patches` branch**: the `.patch` files are stored once on a dedicated branch and referenced by raw
-  URL (`https://raw.githubusercontent.com/Vardot/drupal-core-patches/refs/heads/patches/<file>`), mirroring
-  how `varbase-patches` stores its files. This keeps the per-core branches to just a `composer.json`.
+  URL (`https://raw.githubusercontent.com/webship/drupal-core-patches/refs/heads/patches/<file>`), mirroring
+  how `webship-patches` stores its files. This keeps the per-core branches to just a `composer.json`.
 
 ## How the patches get applied
 
-`vardot/varbase-patches` is a `cweagans/composer-patches` plugin. It gathers `extra.patches` from packages
-in its **`allowed-dependency-patches`** allowlist. `vardot/drupal-core-patches` is on that allowlist, so the
+`webship/webship-patches` is a `cweagans/composer-patches` plugin. It gathers `extra.patches` from packages
+in its **`allowed-dependency-patches`** allowlist. `webship/drupal-core-patches` is on that allowlist, so the
 core patches it declares are merged into the patch set and applied to `drupal/core`.
