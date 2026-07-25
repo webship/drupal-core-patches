@@ -1,6 +1,6 @@
 {
-    "name": "vardot/drupal-core-patches-test",
-    "description": "Test project for vardot/drupal-core-patches: installs the Drupal core this branch targets and checks that cweagans/composer-patches applies every core patch this branch declares.",
+    "name": "webship/drupal-core-patches-test",
+    "description": "Test project for webship/drupal-core-patches: installs the Drupal core this branch targets and checks that cweagans/composer-patches applies every core patch this branch declares.",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "minimum-stability": "dev",
@@ -12,7 +12,7 @@
             "options": {
                 "symlink": false,
                 "versions": {
-                    "vardot/drupal-core-patches": "11.4.x-dev"
+                    "webship/drupal-core-patches": "11.4.x-dev"
                 }
             }
         },
@@ -27,7 +27,7 @@
         "drupal/core-composer-scaffold": "~11.4.0",
         "drupal/core-recommended": "~11.4.0",
         "oomphinc/composer-installers-extender": "~2",
-        "vardot/drupal-core-patches": "11.4.x-dev"
+        "webship/drupal-core-patches": "11.4.x-dev"
     },
     "config": {
         "sort-packages": true,
@@ -49,7 +49,7 @@
         "composer-patches": {
             "exit-on-patch-failure": true,
             "allowed-dependency-patches": [
-                "vardot/drupal-core-patches"
+                "webship/drupal-core-patches"
             ]
         },
         "drupal-scaffold": {

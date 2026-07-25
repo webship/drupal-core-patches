@@ -11,6 +11,6 @@ Each core-minor branch is released with semver tags **within its minor** (`11.3.
    git checkout 11.3.x && git tag -a 11.3.1 -m "Drupal core patches 11.3.1" && git push origin 11.3.1
    ```
 4. Packagist auto-updates via the GitHub webhook; verify the new version at
-   https://packagist.org/packages/vardot/drupal-core-patches .
+   https://packagist.org/packages/webship/drupal-core-patches .
 
 The `patches` branch has **no `composer.json`**, so Packagist ignores it (it is a file store only).

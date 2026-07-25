@@ -1,11 +1,11 @@
-# Tests — `vardot/drupal-core-patches` (11.4.x)
+# Tests — `webship/drupal-core-patches` (11.4.x)
 
 Two checks, run by [`.github/workflows/test-patches.yml`](../.github/workflows/test-patches.yml) on every push and pull request to this branch, and weekly on a schedule. The workflow triggers only on this branch, so the branch tests itself.
 
 ## 1. The patch files still physically exist
 
 ```bash
-git fetch --depth=1 https://github.com/Vardot/drupal-core-patches.git patches:refs/remotes/upstream/patches
+git fetch --depth=1 https://github.com/webship/drupal-core-patches.git patches:refs/remotes/upstream/patches
 php tests/verify-patch-files.php upstream/patches
 ```
 
@@ -26,8 +26,8 @@ composer --working-dir=tests/build install 2>&1 | tee tests/build/install.log
 php tests/verify-applied-patches.php tests/build tests/build/install.log
 ```
 
-[`test.composer.json`](test.composer.json) installs `drupal/core-recommended` at this branch's Drupal core minor, and requires `vardot/drupal-core-patches` from the checkout through a `path` repository. `composer install` therefore applies the branch's curated core patches through the real `cweagans/composer-patches`.
+[`test.composer.json`](test.composer.json) installs `drupal/core-recommended` at this branch's Drupal core minor, and requires `webship/drupal-core-patches` from the checkout through a `path` repository. `composer install` therefore applies the branch's curated core patches through the real `cweagans/composer-patches`.
 
 The install runs with `exit-on-patch-failure`, so a core patch that no longer applies already fails the build. On top of that, `verify-applied-patches.php` asserts that **every** declared core patch was actually applied (evidence: `patches.lock.json` for Composer Patches v2, the patch URL in the install log for v1).
 
-CI runs the install twice, once against `cweagans/composer-patches` `~2.0` and once against `~1.7.0`, because Varbase supports both.
+CI runs the install twice, once against `cweagans/composer-patches` `~2.0` and once against `~1.7.0`, because Webship supports both.
